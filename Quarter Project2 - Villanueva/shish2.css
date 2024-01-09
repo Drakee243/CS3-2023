@@ -44,7 +44,7 @@ body {
 
 .btn:hover {
     background-color: #333;
-    transform: scale(1.5,1.5);
+    scale: 1.25;
     animation: fadeIn;
     animation-duration: 3s;
 }
