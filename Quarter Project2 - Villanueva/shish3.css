@@ -1,6 +1,10 @@
 @keyframes fadeIn {
     0% {opacity: 0;}
-    100% {opacity:1;}
+    30% {opacity: 1;}
+    50% {opacity: 2;}
+    70% {opacity: 3;}
+    90% {opacity: 4;}
+    100% {opacity: 5;}
 }
 body {
     font-family: Arial, sans-serif;
@@ -11,7 +15,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    animation: fadeIn west;
+    animation: fadeIn;
     animation-duration: 3s;
 }
 
@@ -23,20 +27,20 @@ body {
     text-align: center;
     max-width: 500px;
     margin: 10px;
-    animation: fadeIn west;
+    animation: fadeIn;
     animation-duration: 3s;
 }
 
 h1 {
     color: #333;
     font-size: 40px;
-    animation: fadeIn west;
+    animation: fadeIn;
     animation-duration: 3s;
 }
 
 .form-group {
     margin: 20px 0;
-    animation: fadeIn west;
+    animation: fadeIn;
     animation-duration: 3s;
 }
 
@@ -44,7 +48,7 @@ h1 {
     display: block;
     margin-bottom: 10px;
     font-size: 25px;
-    animation: fadeIn west;
+    animation: fadeIn;
     animation-duration: 3s;
 }
 
@@ -55,7 +59,7 @@ h1 {
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 20px; 
-    animation: fadeIn west;
+    animation: fadeIn;
     animation-duration: 3s;
 }
 
@@ -66,12 +70,12 @@ h1 {
     cursor: pointer;
     padding: 10px 20px; 
     font-size: 25px; 
-    animation: fadeIn west;
+    animation: fadeIn;
     animation-duration: 3s;
 }
 
 .form-group input[type="submit"]:hover {
     background-color: #333; 
-    animation: fadeIn west;
+    animation: fadeIn;
     animation-duration: 3s;
 }
