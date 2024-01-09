@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Personal Diary</title>
+    <link rel="stylesheet" href="shish.css">
+</head>
+<body>
+    <div class="topnav">
+        <a href="Home.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="aboutus.html">About Us</a>
+        <a href="contacts.html">Contacts</a>
+        <a href="index.html" class="logout">Log Out</a>
+    </div>
+    <div class="diary">
+        <h1>My Personal Diary</h1>
+        <form id="entry-form">
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" required>
+            <br>
+            <label for="title">Title:</label>
+            <input type="text" id="title" name="title" required>
+            <br>
+            <label for="entry">Entry:</label>
+            <textarea id="entry" name="entry" rows="5" cols="50" required></textarea>
+            <br>
+            <button type="submit">Save Entry</button>
+        </form>
+        <div id="entries"></div>
+    </div>
+    <footer>
+        <div class="footer-content">
+            <div class="social-icons">
+                <a href="https://www.facebook.com/Justin.villanueva.967422" class="social-icon"><img src="fb.png" alt="Facebook"></a>
+                <a href="https://www.youtube.com/@justinvillanueva6537" class="social-icon"><img src="yt.png" alt="YouTube"></a>
+                <a href="https://www.twitter.com/@justinv13001789" class="social-icon"><img src="tt.png" alt="Twitter"></a>
+                <a href="https://www.instagram.com/drakeee0403" class="social-icon"><img src="ig.png" alt="Instagram"></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Your Personal Diary. All rights reserved. | Designed by Your Diary Team</p>
+        </div>
+    </footer>
+    <script>
+        document.getElementById("entry-form").addEventListener("submit", function(event) {
+            event.preventDefault();
+            const date = document.getElementById("date").value;
+            const title = document.getElementById("title").value;
+            const entryText = document.getElementById("entry").value;
+            const entriesDiv = document.getElementById("entries");
+    
+            const newEntry = document.createElement("div");
+            newEntry.innerHTML = `<strong>Date:</strong> ${date}<br><strong>Title:</strong> ${title}<br><strong>Entry:</strong><br>${entryText}<hr>`;
+    
+            entriesDiv.insertBefore(newEntry, entriesDiv.firstChild);
+    
+            document.getElementById("date").value = "";
+            document.getElementById("title").value = "";
+            document.getElementById("entry").value = "";
+        });
+    </script>
+</body>
+</html>
