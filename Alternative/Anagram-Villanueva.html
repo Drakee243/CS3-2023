@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title> Anagram  </title>
+
+	</head>
+
+	<script>
+	function anagram(input1, input2) {
+
+    input1 = input1.toLowerCase();
+    input2 = input2.toLowerCase();
+
+    var first = input1.split('').sort().join('');
+    var second = input2.split('').sort().join('');
+
+    return first.match(second);
+}
+
+    function getWord(){
+    var word1 = prompt("Enter the first word: ");
+    var word2 = prompt("Enter the second word: ");
+
+    var result = anagram(word1, word2);
+
+    if (result) {
+    alert(`The word "${word1}" is an anagram of the word "${word2}".`);
+	}
+
+	else {
+    alert(`The word "${word1}" is not an anagram of the word "${word2}".`);
+	}
+}
+
+getWord()
+    </script>
+</body>
+</html>
